@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1262.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavaproject.StudentAttendance">
+   <children>
+      <ImageView fitHeight="434.0" fitWidth="1120.0" layoutX="142.0" layoutY="-21.0">
+         <image>
+            <Image url="@Img/wosh.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="-14.0" prefHeight="714.0" prefWidth="141.0" style="-fx-background-color: #597D86;">
+         <children>
+            <ImageView fx:id="homepage" fitHeight="99.0" fitWidth="210.0" layoutX="-70.0" layoutY="331.0" onMouseClicked="#gotohomepage" rotate="-90.0">
+               <image>
+                  <Image url="@Img/log.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="88.0" fitWidth="61.0" layoutX="14.0" layoutY="337.0" onMouseClicked="#gotohomepage">
+               <image>
+                  <Image url="@Img/home%20logo.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <TableView fx:id="tv_attendance" layoutX="171.0" layoutY="98.0" prefHeight="566.0" prefWidth="790.0">
+        <columns>
+          <TableColumn fx:id="col_stdId" prefWidth="75.0" text="Student Id" />
+          <TableColumn fx:id="col_stdFname" prefWidth="206.39999389648438" text="First Name" />
+            <TableColumn fx:id="col_stdLname" prefWidth="158.39999389648438" text="Last Name" />
+            <TableColumn fx:id="col_date" minWidth="0.0" prefWidth="170.39996337890625" text="Date " />
+            <TableColumn fx:id="col_present" prefWidth="181.5999755859375" text="Present" />
+            <TableColumn fx:id="col_date2" prefWidth="370.4000244140625" text="Date " />
+        </columns>
+      </TableView>
+      <TextField fx:id="fromdate" layoutX="992.0" layoutY="116.0" prefHeight="26.0" prefWidth="218.0" promptText="Specify a date YYYY-MM-DD" />
+      <Button fx:id="searchResultBtn" layoutX="992.0" layoutY="225.0" mnemonicParsing="false" onAction="#showQueryAttendance" prefHeight="26.0" prefWidth="218.0" text="Search" />
+      <TextField fx:id="todate" layoutX="992.0" layoutY="180.0" prefHeight="0.0" prefWidth="218.0" promptText="Specify a date YYYY-MM-DD" />
+      <Label layoutX="1079.0" layoutY="88.0" prefHeight="18.0" prefWidth="42.0" text="FROM">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1091.0" layoutY="153.0" prefHeight="18.0" prefWidth="18.0" text="TO">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tv_queryAttendance" layoutX="991.0" layoutY="275.0" prefHeight="390.0" prefWidth="218.0">
+        <columns>
+          <TableColumn fx:id="col_stdIdRes" prefWidth="75.0" text="STUDENT ID" />
+          <TableColumn fx:id="col_stdDateAndTImeRes" prefWidth="142.39990234375" text="DATE AND TIME" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

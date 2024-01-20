@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavaproject.AddStudent">
+   <children>
+      <AnchorPane prefHeight="680.0" prefWidth="292.0" style="-fx-background-color: #597d86;">
+         <children>
+            <Button fx:id="addBtn" layoutX="74.0" layoutY="568.0" mnemonicParsing="false" onAction="#handleButtonOnAction" prefHeight="29.0" prefWidth="134.0" style="-fx-background-color: #FFAE42; -fx-border-color: white;" text="Add" textFill="WHITE" />
+            <Button fx:id="editBtn" layoutX="8.0" layoutY="610.0" mnemonicParsing="false" onAction="#handleButtonOnAction" prefHeight="29.0" prefWidth="134.0" style="-fx-background-color: #FFAE42; -fx-border-color: white;" text="Edit" textFill="WHITE" />
+            <Button fx:id="deleteBtn" layoutX="146.0" layoutY="610.0" mnemonicParsing="false" onAction="#handleButtonOnAction" prefHeight="29.0" prefWidth="134.0" style="-fx-background-color: #FFAE42; -fx-border-color: white;" text="Delete" textFill="WHITE" />
+            <Text fill="WHITE" layoutX="20.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" wrappingWidth="70.53673553466803">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="19.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" wrappingWidth="70.53673553466797">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="62.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age" wrappingWidth="27.47006607055664">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="33.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="50.66667327880873">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tfFname" layoutX="93.0" layoutY="87.0" prefHeight="26.0" prefWidth="154.0" />
+            <TextField fx:id="tfLname" layoutX="93.0" layoutY="134.0" prefHeight="26.0" prefWidth="154.0" />
+            <TextField fx:id="tfAge" layoutX="93.0" layoutY="188.0" prefHeight="26.0" prefWidth="30.0" />
+            <TextField fx:id="tfAddress" layoutX="93.0" layoutY="352.0" prefHeight="26.0" prefWidth="154.0" />
+            <Text fill="WHITE" layoutX="24.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Id" wrappingWidth="66.00000000000011">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tfId" layoutX="93.0" layoutY="42.0" prefHeight="26.0" prefWidth="30.0" />
+            <RadioButton fx:id="maleRadio" layoutX="93.0" layoutY="239.0" mnemonicParsing="false" text="Male" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup></RadioButton>
+            <Text fill="WHITE" layoutX="39.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender" wrappingWidth="48.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="femaleRadio" layoutX="93.0" layoutY="265.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$gender" />
+            <Text fill="WHITE" layoutX="7.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth" wrappingWidth="82.1333290100099">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="dobPicker" layoutX="93.0" layoutY="304.0" prefHeight="26.0" prefWidth="154.0" />
+            <Text fx:id="textStatus" fill="WHITE" layoutX="8.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="275.1999725341797">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="tfPassKey" layoutX="93.0" layoutY="405.0" prefHeight="26.0" prefWidth="154.0" />
+            <Text fill="WHITE" layoutX="24.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pass Key" wrappingWidth="59.99999999999994">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="upload" layoutX="91.0" layoutY="447.0" mnemonicParsing="false" onAction="#addImage" prefHeight="26.0" prefWidth="154.0" text="Upload Image" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tvStudent" layoutX="292.0" onMouseClicked="#handleMouseAction" prefHeight="448.0" prefWidth="1073.0">
+        <columns>
+          <TableColumn fx:id="col_Id" prefWidth="82.4000244140625" text="Student Id" />
+          <TableColumn fx:id="col_fname" prefWidth="112.79998779296875" text="First Name" />
+            <TableColumn fx:id="col_lname" prefWidth="105.60000610351562" text="Last Name" />
+            <TableColumn fx:id="col_age" prefWidth="98.39996337890625" text="Age" />
+            <TableColumn fx:id="col_addy" prefWidth="252.0" text="Address" />
+            <TableColumn fx:id="col_gender" prefWidth="70.39996337890625" text="Gender" />
+            <TableColumn fx:id="col_dob" prefWidth="150.39990234375" text="Date Of Birth" />
+            <TableColumn fx:id="col_passKey" prefWidth="199.1999755859374" text="Pass Key" />
+        </columns>
+      </TableView>
+      <Button fx:id="homeBtn" layoutX="1217.0" layoutY="608.0" mnemonicParsing="false" onAction="#switchToHomePage" onMouseClicked="#switchToHomePage" prefHeight="29.0" prefWidth="134.0" style="-fx-background-color: #FFAE42; -fx-border-color: white;" text="HOME" textFill="WHITE" />
+      <ImageView fx:id="imageview" fitHeight="194.0" fitWidth="473.0" layoutX="638.0" layoutY="467.0" onDragDetected="#loadImg" onKeyPressed="#loadImg" onKeyReleased="#loadImg" onMousePressed="#loadImg" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="load" layoutX="324.0" layoutY="610.0" mnemonicParsing="false" onAction="#loadImg" prefHeight="26.0" prefWidth="203.0" style="-fx-background-color: #FFAE42;" text="SHOW IMAGE" textFill="WHITE" />
+      <TextField fx:id="textnum" layoutX="484.0" layoutY="564.0" prefHeight="26.0" prefWidth="41.0" />
+      <Label layoutX="325.0" layoutY="564.0" prefHeight="26.0" prefWidth="147.0" text="ENTER STUDENT ID">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

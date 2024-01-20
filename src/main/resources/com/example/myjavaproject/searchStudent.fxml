@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="768.0" style="-fx-background-color: #597d86;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavaproject.SearchStudent">
+   <children>
+      <ImageView fitHeight="326.0" fitWidth="446.0" layoutX="334.0" layoutY="108.0">
+         <image>
+            <Image url="@Img/frame.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="stdId" layoutX="474.0" layoutY="109.0" prefHeight="47.0" prefWidth="300.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="77.0" fitWidth="770.0" layoutY="-1.0" rotate="360.0">
+         <image>
+            <Image url="@Img/log.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfSearchStd" layoutX="124.0" layoutY="21.0" prefHeight="40.0" prefWidth="366.0" promptText="Type Student Id, First Name or Last Name...." />
+      <Button fx:id="btnSearch" layoutX="490.0" layoutY="21.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="40.0" prefWidth="151.0" text="Search" />
+      <Label layoutX="354.0" layoutY="109.0" prefHeight="47.0" prefWidth="98.0" text="Student ID :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="154.0" prefHeight="47.0" prefWidth="98.0" text="First Name :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="199.0" prefHeight="47.0" prefWidth="98.0" text="Last Name :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="381.0" prefHeight="47.0" prefWidth="116.0" text="Date Of Birth :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="372.0" layoutY="334.0" prefHeight="47.0" prefWidth="82.0" text="Address :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="378.0" layoutY="291.0" prefHeight="47.0" prefWidth="71.0" text="Gender :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="406.0" layoutY="244.0" prefHeight="47.0" prefWidth="48.0" text="Age :" textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="stdFName" layoutX="469.0" layoutY="154.0" prefHeight="47.0" prefWidth="274.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="stdLName" layoutX="473.0" layoutY="199.0" prefHeight="47.0" prefWidth="262.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="stdAge" layoutX="473.0" layoutY="244.0" prefHeight="47.0" prefWidth="256.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="stdGender" layoutX="475.0" layoutY="291.0" prefHeight="47.0" prefWidth="262.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="stdAddress" layoutX="471.0" layoutY="334.0" prefHeight="47.0" prefWidth="274.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="stdDOB" layoutX="471.0" layoutY="379.0" prefHeight="47.0" prefWidth="274.0" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="stdImage" fitHeight="191.0" fitWidth="241.0" layoutX="52.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true" x="6.0" />
+   </children>
+</AnchorPane>

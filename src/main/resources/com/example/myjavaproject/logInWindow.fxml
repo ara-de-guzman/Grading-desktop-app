@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="365.0" prefWidth="837.0" style="-fx-background-color: #597d86;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavaproject.LogInWindow">
+   <children>
+      <ImageView fitHeight="386.0" fitWidth="362.0" layoutX="-8.0" layoutY="5.0" rotate="90.0">
+         <image>
+            <Image url="@Img/frame.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="149.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT ID" textAlignment="CENTER" />
+      <Text fill="WHITE" layoutX="141.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSKEY" textAlignment="CENTER" wrappingWidth="81.67498779296875" />
+      <TextField fx:id="tf_getId" alignment="CENTER" layoutX="147.0" layoutY="87.0" onAction="#logInAction" prefHeight="26.0" prefWidth="67.0" />
+      <TextField fx:id="tf_passkey" layoutX="57.0" layoutY="172.0" prefHeight="26.0" prefWidth="257.0" />
+      <Text fill="WHITE" layoutX="58.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PLEASE ENTER YOUR STUDENT ID AND PASSKEY" textAlignment="CENTER" />
+      <Button fx:id="homeBtn" layoutX="199.0" layoutY="239.0" mnemonicParsing="false" onAction="#getHome" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #597d86;" text="CANCEL" textFill="WHITE" />
+      <Button fx:id="logInBtn" layoutX="82.0" layoutY="239.0" mnemonicParsing="false" onAction="#logInAction" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #597d86;" text="LOG IN" textFill="WHITE" />
+      <Text fx:id="textForInt" layoutX="419.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="81.67498779296875">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="595.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT ATTENDANCE" textAlignment="CENTER" />
+      <TextField fx:id="tf_stdAttendance" alignment="CENTER" layoutX="625.0" layoutY="100.0" prefHeight="26.0" prefWidth="67.0" />
+      <TextField fx:id="tf_getId11" alignment="CENTER" layoutX="530.0" layoutY="172.0" onAction="#logInAction" prefHeight="26.0" prefWidth="258.0" />
+      <Button fx:id="presentBtn" layoutX="617.0" layoutY="239.0" mnemonicParsing="false" onAction="#signInAction" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #FFAE42;" text="PRESENT" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="626.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT ID" textAlignment="CENTER" />
+      <Text fill="WHITE" layoutX="618.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSKEY" textAlignment="CENTER" wrappingWidth="81.67498779296875" />
+      <Text fx:id="textStatus" fill="WHITE" layoutX="603.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="112.5367431640625">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
